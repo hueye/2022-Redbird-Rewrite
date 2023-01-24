@@ -7,12 +7,12 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-public class Collector extends CommandBase {
-    WPI_TalonFX collectorMotor;
+public class Collector extends SubsystemBase {
 
+    WPI_TalonFX collectorMotor;
     DoubleSolenoid extendPiston;
 
     boolean extended;
@@ -35,10 +35,12 @@ public void activation(boolean dump){
     }
 }
 
-public void Retract() {
+public void retraction() {
     extendPiston.set(Value.kReverse);
     collectorMotor.set(ControlMode.PercentOutput, 0);
 }
 
+@Override
+public void periodic() {}
 
 }

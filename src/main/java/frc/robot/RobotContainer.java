@@ -7,7 +7,10 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Subsystem;
+import frc.robot.subsystems.Collector;
+import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Indexer;
+import frc.robot.subsystems.Shooter;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -16,11 +19,18 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
-  public static final String driverController = null;
 
-public static final Subsystem collectorSystem = null;
+  public static XboxController operatorController;
 
-public static Subsystem drivetrain;
+  public static XboxController driverController;
+
+public static Collector collectorSystem;
+
+public static Drivetrain drivetrain;
+
+public static Indexer indexerSystem;
+
+public static Shooter shooterSystem;
 
   // The robot's subsystems and commands are defined here...
  
