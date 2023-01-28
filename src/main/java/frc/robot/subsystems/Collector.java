@@ -12,8 +12,8 @@ import frc.robot.Constants;
 
 public class Collector extends SubsystemBase {
 
-    WPI_TalonFX collectorMotor;
-    DoubleSolenoid extendPiston;
+    static WPI_TalonFX collectorMotor;
+    static DoubleSolenoid extendPiston;
 
     boolean extended;
 
@@ -25,7 +25,7 @@ public Collector() {
     extendPiston = new DoubleSolenoid(Constants.COextendPistonID, PneumaticsModuleType.REVPH, Constants.COextendPistonForward, Constants.COextendPistonReverse);
 }
 
-public void activation(boolean dump){
+public static void Activate(boolean dump){
     extendPiston.set(Value.kForward);
 
     if(!dump){
@@ -35,7 +35,7 @@ public void activation(boolean dump){
     }
 }
 
-public void retraction() {
+public static void Retract() {
     extendPiston.set(Value.kReverse);
     collectorMotor.set(ControlMode.PercentOutput, 0);
 }

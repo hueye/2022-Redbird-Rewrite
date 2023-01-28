@@ -26,9 +26,9 @@ public class RobotContainer {
 
 
 //defining subsystems
-public static Collector collectorSystem = new Collector();
-
 public static Drivetrain drivetrain = new Drivetrain();
+
+public static Collector collectorSystem = new Collector();
 
 public static Indexer indexerSystem = new Indexer();
   
@@ -65,7 +65,7 @@ public static Compressor compressorSystem = new Compressor(null);
   }
 
 public static Object getY() {
-    return null;
+  return null;
 }
 
 public static Object getButton(int i) {
@@ -82,16 +82,8 @@ public static Object getX() {
 public static void ArcadeDrive(Object y, Object x) {
 }
 
-public static void activation(boolean dump) {
-}
+public static void Active() {
 
-public static void retraction() {
-}
-
-public class compressorSystem {
-}
-
-public static void compressorSystem() {
 }
 
 }

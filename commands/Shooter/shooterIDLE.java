@@ -1,12 +1,12 @@
 package frc.robot.commands.Shooter;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
 import frc.robot.RobotContainer;
 
-
-public class shooterACTIVE extends CommandBase {
+public class shooterIDLE extends CommandBase {
     
-    public shooterACTIVE() {
+    public shooterIDLE() {
         addRequirements(RobotContainer.shooterSystem);
     }
 
@@ -15,13 +15,7 @@ public class shooterACTIVE extends CommandBase {
 
     @Override
     public void execute() {
-        int POV = RobotContainer.operatorController.getPOV();
-
-        int targetRPM = RobotContainer.shooterSystem.lookupRPM();
-
-        boolean hood = RobotContainer.shooterSystem.checkhood(POV);
-
-        RobotContainer.shooterSystem.Shoot(targetRPM, hood);
+        RobotContainer.shooterSystem.Shoot(Constants.SHidleRPM, false);
     }
 
     @Override

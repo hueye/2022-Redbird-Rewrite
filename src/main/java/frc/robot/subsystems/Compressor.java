@@ -6,20 +6,22 @@ import frc.robot.Constants;
 
 public class Compressor extends SubsystemBase {
     
-    Compressor compressor;
+    static Compressor theeCompressor;
+
 
     public Compressor(int cmid, PneumaticsModuleType revph) {
     }
 
-    public void compressing() {
-        compressor = new Compressor(Constants.CMID, PneumaticsModuleType.REVPH);
+    public static void Compress() {
+        theeCompressor = new Compressor(Constants.CMID, PneumaticsModuleType.REVPH);
+    }
+    
+    public void Active() {
+        theeCompressor.enableAnalog(Constants.CMrangeMin, Constants.CMrangeMax);
     }
 
-    public void activation() {
-        compressor.enableAnalog(Constants.CMrangeMin, Constants.CMrangeMax);
-    }
 
-    private void enableAnalog(double cmrangemin, double cmrangemax) {
+    private void enableAnalog(double CMrangeMin, double CMrangeMax) {
     }
 
     @Override
