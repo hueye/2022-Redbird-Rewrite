@@ -68,5 +68,11 @@ public class Constants {
     public static final double SHkF = 0;
 
 
-    //
+    //below are the constants for the compressor (CM)
+
+    public static final int CMID = 14;
+
+    public static final double CMrangeMin = 60;
+
+    public static final double CMrangeMax = 120;
 }

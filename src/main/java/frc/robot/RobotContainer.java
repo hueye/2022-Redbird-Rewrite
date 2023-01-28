@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -11,26 +12,31 @@ import frc.robot.subsystems.Collector;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Indexer;
 import frc.robot.subsystems.Shooter;
+//import frc.RobotContainer.Compress;
+//import frc.robot.subsystems.Compress;
+//import frc.robot.commands.Compressor.Compress_ACTIVE;
 
-/**
- * This class is where the bulk of the robot should be declared. Since Command-based is a
- * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
- * periodic methods (other than the scheduler calls). Instead, the structure of the robot (including
- * subsystems, commands, and button mappings) should be declared here.
- */
+
+
 public class RobotContainer {
 
   public static XboxController operatorController;
 
   public static XboxController driverController;
 
-public static Collector collectorSystem;
 
-public static Drivetrain drivetrain;
+//defining subsystems
+public static Collector collectorSystem = new Collector();
 
-public static Indexer indexerSystem;
+public static Drivetrain drivetrain = new Drivetrain();
 
-public static Shooter shooterSystem;
+public static Indexer indexerSystem = new Indexer();
+  
+public static Shooter shooterSystem = new Shooter();
+
+public static Compressor compressorSystem = new Compressor(null);
+
+
 
   // The robot's subsystems and commands are defined here...
  
@@ -81,4 +87,11 @@ public static void activation(boolean dump) {
 
 public static void retraction() {
 }
+
+public class compressorSystem {
+}
+
+public static void compressorSystem() {
+}
+
 }
