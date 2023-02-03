@@ -32,9 +32,6 @@ public Drivetrain() {
     rightMotorTwo = new WPI_TalonFX(Constants.DTmotorTwoR);
     rightMotorThree = new WPI_TalonFX(Constants.DTmotorThreeR);
 
-    leftMotors = new MotorControllerGroup(leftMotorOne, leftMotorTwo, leftMotorThree);
-    rightMotors = new MotorControllerGroup(rightMotorOne, rightMotorTwo, rightMotorThree);
-
     leftMotorOne.setNeutralMode(NeutralMode.Coast);
     leftMotorTwo.setNeutralMode(NeutralMode.Coast);
     leftMotorThree.setNeutralMode(NeutralMode.Coast);
@@ -44,11 +41,20 @@ public Drivetrain() {
     rightMotorThree.setNeutralMode(NeutralMode.Coast);
     leftMotors.setInverted(true);
 
-    differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
+    leftMotors = new MotorControllerGroup(leftMotorOne, leftMotorTwo, leftMotorThree);
+    rightMotors = new MotorControllerGroup(rightMotorOne, rightMotorTwo, rightMotorThree);
+
+    differentialDrive = new DifferentialDrive(rightMotors, leftMotors);
 
 }
     public void CurveDrive(double speed, double turnBy, boolean turnInPlace) {
-    differentialDrive.curvatureDrive(speed, turnBy, turnInPlace);
-        }
+        differentialDrive.curvatureDrive(speed, turnBy, turnInPlace);
+    }
+    
+    public void ArcadeDrive(double moveSpeed, double rotateSpeed) {
+    }
+    
+    public void Brake(boolean b) {
+    }
     
 }

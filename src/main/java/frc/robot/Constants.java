@@ -75,4 +75,15 @@ public class Constants {
     public static final double CMrangeMin = 60;
 
     public static final double CMrangeMax = 120;
+
+    //controller constants
+
+    public static final int ctrlForDriver = 0;
+
+    public static final int ctrlForOperator = 1;
+
+    public static final int ctrlForDriverMoveAxis = 2;
+
+    public static final int ctrlForDriverRotateAxis = 2;
+
 }
