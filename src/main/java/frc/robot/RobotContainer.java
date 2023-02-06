@@ -28,7 +28,11 @@ public class RobotContainer {
 
   public JoystickButton brakeButton;
 
-  public JoystickButton collectButton;
+  public JoystickButton collectionCollect;
+
+  //public JoystickButton collectionDump;
+
+  //public JoystickButton indexButton;
 
 
 //defining subsystems
@@ -98,10 +102,9 @@ public void buttonBinds() {
   brakeButton = new JoystickButton(driverController, XboxController.Button.kB.value);
   brakeButton.whileHeld(new driveBRAKE());
 
-  collectButton = new JoystickButton(driverController, XboxController.Button.kA.value);
-  collectButton.whileHeld(new collectorACTIVATE(false), true);
+  collectionCollect = new JoystickButton(driverController, XboxController.Button.kA.value);
+  collectionCollect.whileHeld(new collectorACTIVATE(false), true);
 
-  
 }
 
 }
