@@ -17,7 +17,7 @@ public class driveCURVE extends CommandBase {
 //executing
     @Override
     public void execute() {
-        RobotContainer.CurveDrive(RobotContainer.getY(), RobotContainer.getX());
+        RobotContainer.CurveDrive(RobotContainer.driverController.getLeftY(), RobotContainer.driverController.getRightX());
          }
 
 //called when the command ends/is interrupted

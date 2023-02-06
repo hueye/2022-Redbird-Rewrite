@@ -18,7 +18,6 @@ public class driveARCADE extends CommandBase {
 //executing
     @Override
     public void execute() {
-
             double moveSpeed = -RobotContainer.driverController.getRawAxis(Constants.ctrlForDriverMoveAxis);
             double rotateSpeed = RobotContainer.driverController.getRawAxis(Constants.ctrlForDriverRotateAxis);
 

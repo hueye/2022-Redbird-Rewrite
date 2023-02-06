@@ -2,7 +2,8 @@ package frc.robot;
 
 public class Constants {
 
-    //below are the constants for the drivetrain (DT)
+
+    //drivetrain constants (DT)
     public static final int DTmotorOneL = 1;
 
     public static final int DTmotorTwoL = 2;
@@ -18,7 +19,7 @@ public class Constants {
     public static final int DTgyroID = 0;
 
 
-    //below are the constants for the collector (CO)
+    //collector constants (CO)
     public static final int COmotor = 7;
 
     public static final int COextendPistonID = 8;
@@ -30,7 +31,7 @@ public class Constants {
     public static final double COmotorSpeed = 0.8;
 
 
-    //below are the constants for the indexer (IN)
+    //indexer constants (IN)
     public static final int INmotorID = 9;
 
     public static final int INmotorFeed = 10;
@@ -38,7 +39,7 @@ public class Constants {
     public static final double INmotorSpeed = 0.8;
 
 
-    //below are the constants for the shooter (SH)
+    //shooter constants (SH)
     public static final int SHmotorMasterID = 11;
     
     public static final int SHmotorFollowID = 12;
@@ -68,16 +69,35 @@ public class Constants {
     public static final double SHkF = 0;
 
 
-    //below are the constants for the compressor (CM)
-
+    //compressor constants (CM)
     public static final int CMID = 14;
 
     public static final double CMrangeMin = 60;
 
     public static final double CMrangeMax = 120;
 
-    //controller constants
 
+    //climb constants (CB)
+    public static final int CBlftExtended = 18000;
+
+    public static final int CBlftRetracted = -180000;
+
+    public static final int CBrghtExtended = 18000;
+
+    public static final int CBrghtRetracted = -180000;
+
+    public static final int CBpistonForward = 0;
+
+    public static final int CBpistonReverse = 1;
+
+    public static final int CBlftID = 15;
+
+    public static final int CBrghtID = 16;
+
+    public static final int CBpistonID = 17;
+
+
+    //driver controller constants
     public static final int ctrlForDriver = 0;
 
     public static final int ctrlForOperator = 1;

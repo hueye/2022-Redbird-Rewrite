@@ -7,25 +7,21 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-//import edu.wpi.first.wpilibj.command.Command;
-//import frc.robot.commands.Collector.collectorACTIVATE;
-//import frc.robot.commands.Compressor.compressorACTIVATE;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.commands.Collector.collectorACTIVATE;
 import frc.robot.commands.Drivetrain.driveARCADE;
-//import frc.robot.commands.Drivetrain.driveBRAKE;
+import frc.robot.commands.Drivetrain.driveBRAKE;
 import frc.robot.commands.Shooter.shooterIDLE;
-//import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Climb;
 import frc.robot.subsystems.Collector;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Indexer;
 import frc.robot.subsystems.Shooter;
-//import frc.RobotContainer.Compress;
-//import frc.robot.subsystems.Compress;
-//import frc.robot.commands.Compressor.Compress_ACTIVE;
 
 public class RobotContainer {
 
-//controllers and buttons
+
+  //controllers and buttons
   public static XboxController operatorController;
 
   public static XboxController driverController;
@@ -46,6 +42,7 @@ public static Shooter shooterSystem = new Shooter();
 
 public static Compressor compressorSystem = new Compressor(null);
 
+public static Climb climbSystem = new Climb();
 
 
   // The robot's subsystems and commands are defined here...
@@ -65,7 +62,7 @@ public static Compressor compressorSystem = new Compressor(null);
 
     shooterSystem.setDefaultCommand(new shooterIDLE());
 
-    //compressorSystem.setDefaultCommand(new compressorACTIVATE());
+    //compressorSystem.setDefaultCommand(new compressACTIVATE());
 
   }
 
@@ -96,23 +93,15 @@ public static void TankDrive(Object y, Object x) {}
 
 public static void Active() {}
 
-
-public static Object getY() {
-    
-    return 4;
-}
-
-public static Object getX() {
-    return 4;
-}
-
-/*
+//button binding
 public void buttonBinds() {
   brakeButton = new JoystickButton(driverController, XboxController.Button.kB.value);
   brakeButton.whileHeld(new driveBRAKE());
 
   collectButton = new JoystickButton(driverController, XboxController.Button.kA.value);
-  collectButton.whileHeld(new collectorACTIVATE());
+  collectButton.whileHeld(new collectorACTIVATE(false), true);
+
+  
 }
-*/
+
 }

@@ -6,9 +6,9 @@ import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 
-public class compressorACTIVATE extends CommandBase {
+public class compressACTIVE extends CommandBase {
     
-    public compressorACTIVATE() {
+    public compressACTIVE() {
         addRequirements(RobotContainer.compressorSystem);
     }
 
