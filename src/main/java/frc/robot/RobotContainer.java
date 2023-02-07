@@ -30,7 +30,7 @@ public class RobotContainer {
 
   public JoystickButton collectionCollect;
 
-  //public JoystickButton collectionDump;
+  public JoystickButton collectionDump;
 
   //public JoystickButton indexButton;
 
@@ -105,6 +105,8 @@ public void buttonBinds() {
   collectionCollect = new JoystickButton(driverController, XboxController.Button.kA.value);
   collectionCollect.whileHeld(new collectorACTIVATE(false), true);
 
+  collectionDump = new JoystickButton(driverController, XboxController.Button.kB.value);
+  collectionDump.whileHeld(new collectorACTIVATE(true), true);
 }
 
 }
