@@ -9,14 +9,14 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-public class Shooter extends SubsystemBase {
+public class ShooterWithHood extends SubsystemBase {
     
     WPI_TalonFX masterMotor;
     WPI_TalonFX followerMotor;
 
     DoubleSolenoid hoodPiston;
 
-    public Shooter() {
+    public ShooterWithHood() {
         hoodPiston = new DoubleSolenoid(Constants.SHhoodPistonID, PneumaticsModuleType.REVPH, Constants.SHhoodPistonForward, Constants.SHhoodPistonBackward);
 
         masterMotor = new WPI_TalonFX(Constants.SHmotorMasterID);
