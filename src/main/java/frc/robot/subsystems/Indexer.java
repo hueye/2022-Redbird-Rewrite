@@ -15,8 +15,8 @@ public class Indexer extends SubsystemBase {
     MotorControllerGroup motors;
 
     public Indexer() {
-        indexerMotor = new WPI_TalonSRX(Constants.INmotorID);
-        feederMotor = new WPI_TalonSRX(Constants.INmotorFeed);
+        indexerMotor = new WPI_TalonSRX(Constants.IN_MOTOR_ID);
+        feederMotor = new WPI_TalonSRX(Constants.IN_MOTOR_FEED);
 
         indexerMotor.setNeutralMode(NeutralMode.Brake);
         feederMotor.setNeutralMode(NeutralMode.Brake);
@@ -27,7 +27,7 @@ public class Indexer extends SubsystemBase {
     }
 
     public void indexing() {
-        motors.set(Constants.INmotorSpeed);
+        motors.set(Constants.IN_MOTOR_SPEED);
     }
 
     public void terminating() {

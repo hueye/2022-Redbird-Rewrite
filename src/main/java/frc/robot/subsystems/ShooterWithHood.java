@@ -17,10 +17,10 @@ public class ShooterWithHood extends SubsystemBase {
     DoubleSolenoid hoodPiston;
 
     public ShooterWithHood() {
-        hoodPiston = new DoubleSolenoid(Constants.SHhoodPistonID, PneumaticsModuleType.REVPH, Constants.SHhoodPistonForward, Constants.SHhoodPistonBackward);
+        hoodPiston = new DoubleSolenoid(Constants.SH_HOOD_PISTON_ID, PneumaticsModuleType.REVPH, Constants.SH_HOOD_PISTON_FORWARD, Constants.SH_HOOD_PISTON_BACKWARD);
 
-        masterMotor = new WPI_TalonFX(Constants.SHmotorMasterID);
-        followerMotor = new WPI_TalonFX(Constants.SHmotorFollowID);
+        masterMotor = new WPI_TalonFX(Constants.SH_MOTOR_MASTER_ID);
+        followerMotor = new WPI_TalonFX(Constants.SH_MOTOR_FOLLOW_ID);
 
         masterMotor.config_kP(0, Constants.SHkP);
         masterMotor.config_kI(0, Constants.SHkI);
@@ -42,7 +42,7 @@ public class ShooterWithHood extends SubsystemBase {
     }
 
     public void terminating() {
-        masterMotor.set(TalonFXControlMode.Velocity, Constants.SHidleRPM);
+        masterMotor.set(TalonFXControlMode.Velocity, Constants.SH_IDLE_RPM);
     }
 
     public int lookupRPM(int POV) {
@@ -50,19 +50,19 @@ public class ShooterWithHood extends SubsystemBase {
 
         switch(POV) {
             case 0:
-            rpmSet = Constants.SHshootLowRPM;
+            rpmSet = Constants.SH_SHOOT_LOW_RPM;
 
             case 90:
-            rpmSet = Constants. SHshootMidRPM;
+            rpmSet = Constants. SH_SHOOT_MID_RPM;
 
             case 180:
-            rpmSet = Constants.SHshootHighRPM;
+            rpmSet = Constants.SH_SHOOT_HIGH_RPM;
 
             case 270:
-            rpmSet = Constants.SHshootVeryHighRPM;
+            rpmSet = Constants.SH_SHOOT_VERY_HIGH_RPM;
 
             default:
-            rpmSet = Constants.SHidleRPM;
+            rpmSet = Constants.SH_IDLE_RPM;
         }
 
         return rpmSet;

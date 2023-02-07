@@ -18,8 +18,8 @@ public class driveARCADE extends CommandBase {
 //executing
     @Override
     public void execute() {
-            double moveSpeed = -RobotContainer.driverController.getRawAxis(Constants.ctrlForDriverMoveAxis);
-            double rotateSpeed = RobotContainer.driverController.getRawAxis(Constants.ctrlForDriverRotateAxis);
+            double moveSpeed = -RobotContainer.driverController.getRawAxis(Constants.CTRL_FOR_DRIVER_MOVE_AXIS);
+            double rotateSpeed = RobotContainer.driverController.getRawAxis(Constants.CTRL_FOR_DRIVER_ROTATE_AXIS);
 
             RobotContainer.drivetrain.ArcadeDrive(moveSpeed, rotateSpeed);
     }

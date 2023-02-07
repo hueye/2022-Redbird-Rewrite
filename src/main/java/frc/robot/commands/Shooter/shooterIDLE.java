@@ -15,7 +15,7 @@ public class shooterIDLE extends CommandBase {
 
     @Override
     public void execute() {
-        RobotContainer.shooterSystem.Shoot(Constants.SHidleRPM, false);
+        RobotContainer.shooterSystem.Shoot(Constants.SH_IDLE_RPM, false);
     }
 
     @Override

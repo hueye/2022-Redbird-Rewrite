@@ -18,20 +18,20 @@ public class Collector extends SubsystemBase {
     boolean extended;
 
 public Collector() {
-    collectorMotor = new WPI_TalonFX(Constants.COmotor);
+    collectorMotor = new WPI_TalonFX(Constants.CO_MOTOR);
 
     collectorMotor.setNeutralMode(NeutralMode.Coast);
 
-    extendPiston = new DoubleSolenoid(Constants.COextendPistonID, PneumaticsModuleType.REVPH, Constants.COextendPistonForward, Constants.COextendPistonReverse);
+    extendPiston = new DoubleSolenoid(Constants.CO_EXTEND_PISTON_ID, PneumaticsModuleType.REVPH, Constants.CO_EXTEND_PISTON_FORWARD, Constants.CO_EXTEND_PISTON_REVERSE);
 }
 
 public static void Activate(boolean dump){
     extendPiston.set(Value.kForward);
 
     if(!dump){
-        collectorMotor.set(ControlMode.PercentOutput, Constants.COmotorSpeed);
+        collectorMotor.set(ControlMode.PercentOutput, Constants.CO_MOTOR_SPEED);
     }else{
-        collectorMotor.set(ControlMode.PercentOutput, -Constants.COmotorSpeed);
+        collectorMotor.set(ControlMode.PercentOutput, -Constants.CO_MOTOR_SPEED);
     }
 }
 

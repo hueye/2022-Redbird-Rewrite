@@ -72,9 +72,9 @@ public static Climb climbSystem = new Climb();
     configureButtonBindings();
 
   //controllers and buttons
-    driverController = new XboxController(Constants.ctrlForDriver);
+    driverController = new XboxController(Constants.CTRL_FOR_DRIVER);
 
-    operatorController = new XboxController(Constants.ctrlForOperator);
+    operatorController = new XboxController(Constants.CTRL_FOR_OPERATOR);
 
   //default commands
     drivetrain.setDefaultCommand(new driveARCADE());
@@ -110,7 +110,6 @@ public static void ArcadeDrive(Object y, Object x) {}
 
 public static void TankDrive(Object y, Object x) {}
 
-public static void Active() {}
 
 //button binding
 public void buttonBinds() {
@@ -140,6 +139,9 @@ public void buttonBinds() {
 
   leftButton = new POVButton(operatorController, 270);
   leftButton.whileHeld(new shooterACTIVE(), true);
+}
+
+public static void Active() {
 }
 
 }

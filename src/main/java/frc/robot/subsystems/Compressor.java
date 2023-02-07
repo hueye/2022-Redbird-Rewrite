@@ -17,7 +17,7 @@ public class Compressor extends SubsystemBase {
     }
     
     public void Active() {
-        theeCompressor.enableAnalog(Constants.CMrangeMin, Constants.CMrangeMax);
+        theeCompressor.enableAnalog(Constants.CM_RANGE_MIN, Constants.CM_RANGE_MAX);
     }
 
 

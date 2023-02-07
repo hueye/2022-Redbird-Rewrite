@@ -24,13 +24,13 @@ public class Drivetrain extends SubsystemBase {
     DifferentialDrive differentialDrive;
 
 public Drivetrain() {
-    leftMotorOne = new WPI_TalonFX(Constants.DTmotorOneL);
-    leftMotorTwo = new WPI_TalonFX(Constants.DTmotorTwoL);
-    leftMotorThree = new WPI_TalonFX(Constants.DTmotorThreeL);
+    leftMotorOne = new WPI_TalonFX(Constants.DT_LFT_MOTOR_ONE_ID);
+    leftMotorTwo = new WPI_TalonFX(Constants.DT_LFT_MOTOR_TWO_ID);
+    leftMotorThree = new WPI_TalonFX(Constants.DT_LFT_MOTOR_THREE_ID);
 
-    rightMotorOne = new WPI_TalonFX(Constants.DTmotorOneR);
-    rightMotorTwo = new WPI_TalonFX(Constants.DTmotorTwoR);
-    rightMotorThree = new WPI_TalonFX(Constants.DTmotorThreeR);
+    rightMotorOne = new WPI_TalonFX(Constants.DT_RGHT_MOTOR_ONE_ID);
+    rightMotorTwo = new WPI_TalonFX(Constants.DT_RGHT_MOTOR_TWO_ID);
+    rightMotorThree = new WPI_TalonFX(Constants.DT_RGHT_MOTOR_THREE_ID);
 
     leftMotorOne.setNeutralMode(NeutralMode.Coast);
     leftMotorTwo.setNeutralMode(NeutralMode.Coast);
