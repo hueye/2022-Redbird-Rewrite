@@ -1,7 +1,6 @@
 package frc.robot.commands.Drivetrain;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
 import frc.robot.RobotContainer;
 
 //declaring a new arcade drive
@@ -18,16 +17,12 @@ public class driveARCADE extends CommandBase {
 //executing
     @Override
     public void execute() {
-            double moveSpeed = -RobotContainer.driverController.getRawAxis(Constants.CTRL_FOR_DRIVER_MOVE_AXIS);
-            double rotateSpeed = RobotContainer.driverController.getRawAxis(Constants.CTRL_FOR_DRIVER_ROTATE_AXIS);
-
-            RobotContainer.drivetrain.ArcadeDrive(moveSpeed, rotateSpeed);
+            RobotContainer.ArcadeDrive(RobotContainer.driverController.getRightX(), RobotContainer.driverController.getLeftY());
     }
 
 //called when the command ends/is interrupted
     @Override
     public void end(boolean interrupted) {
-        RobotContainer.drivetrain.ArcadeDrive(0, 0);
     }
 
 //returns true when the command has to end

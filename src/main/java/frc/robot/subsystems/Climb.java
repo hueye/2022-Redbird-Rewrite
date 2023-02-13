@@ -32,6 +32,7 @@ public class Climb extends SubsystemBase {
 
         leftArmMotor.set(Constants.CB_LFT_EXTENDED);
         rightArmMotor.set(Constants.CB_RGHT_EXTENDED);
+
     }
 
     public static void noClimbing() {
@@ -39,6 +40,7 @@ public class Climb extends SubsystemBase {
 
         leftArmMotor.set(Constants.CB_LFT_RETRACTED);
         rightArmMotor.set(Constants.CB_RGHT_RETRACTED);
+
     }
 
 

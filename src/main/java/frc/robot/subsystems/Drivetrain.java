@@ -48,7 +48,6 @@ public Drivetrain() {
 
 }
     public void CurveDrive(double speed, double turnBy, boolean turnInPlace) {
-        differentialDrive.curvatureDrive(speed, turnBy, turnInPlace);
     }
     
     public void ArcadeDrive(double moveSpeed, double rotateSpeed) {

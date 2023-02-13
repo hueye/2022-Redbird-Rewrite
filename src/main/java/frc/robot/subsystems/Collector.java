@@ -33,14 +33,17 @@ public static void Activate(boolean dump){
     }else{
         collectorMotor.set(ControlMode.PercentOutput, -Constants.CO_MOTOR_SPEED);
     }
+
 }
 
 public static void Retract() {
     extendPiston.set(Value.kReverse);
     collectorMotor.set(ControlMode.PercentOutput, 0);
+
 }
 
 @Override
 public void periodic() {}
+
 
 }
